@@ -15,6 +15,10 @@ A single, no-build-step birthday website that starts with the Golden Scratch Car
 
 No package installation or build step is required.
 
+## Deploy on Vercel
+
+Import this project with the repository root as the **Root Directory** (`.`). Choose **Other** as the framework preset, leave the build command empty, and set the output directory to `.`. Vercel serves the root `index.html` as the entry point; `vercel.json` explicitly maps `/` to that file. Keep the `birthday/`, `css/`, and `js/` folders alongside the root files so the entrance and embedded birthday page can load their assets.
+
 ## The experience
 
 1. Start the greeting and scratch each of the three golden panels. Mouse and touch/pen input are supported. Each clue appears after about 60% of its panel has been cleared; **Reveal all** appears after 20 seconds.

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e0d2f5"><title>A little surprise</title><link rel="icon" href="birthday/images/hero-poster.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+<div class="decor decor-one" aria-hidden="true">🌷　✿　🌿</div><div class="decor decor-two" aria-hidden="true">🌷　♧　✿</div>
+<main id="app" class="app">
+<section id="intro" class="screen intro-screen">
+  <div class="eyebrow">A LITTLE MOMENT, JUST FOR YOU</div>
+  <h1>A little surprise<br>before your surprise</h1>
+  <p class="lead">Scratch the golden card</p>
+  <div class="intro-flower" aria-hidden="true">🌷</div>
+  <button id="startBtn" class="primary">Start <span aria-hidden="true">✦</span></button>
+</section>
+<section id="scratchScreen" class="screen game-screen hidden" aria-label="Golden scratch card">
+  <div class="topline"><span class="tiny-star">✦</span><span>YOUR LITTLE SECRET</span><span class="tiny-star">✦</span></div>
+  <h2>Something lovely is waiting</h2>
+  <p class="subhead">Gently scratch away the gold to reveal three clues.</p>
+  <div class="scratch-wrap" id="scratchWrap">
+    <div class="clues" id="clues">
+      <article class="clue" data-clue="0"><span class="clue-number">01</span><p>Born in the month of October</p><span class="clue-flower">✿</span></article>
+      <article class="clue" data-clue="1"><span class="clue-number">02</span><p>A day near the end of the month</p><span class="clue-flower">✧</span></article>
+      <article class="clue" data-clue="2"><span class="clue-number">03</span><p>The year you were born ends with 04</p><span class="clue-flower">❀</span></article>
+    </div>
+    <canvas id="scratchCanvas" aria-label="Scratch the golden surface with your finger or mouse"></canvas>
+    <div class="scratch-label" id="scratchLabel">SCRATCH HERE ✦</div>
+  </div>
+  <div class="scratch-meta"><span id="scratchStatus">A little scratch at a time</span><button id="revealBtn" class="text-button hidden">Reveal all</button></div>
+  <p class="microcopy">Every little scratch brings you closer.</p>
+</section>
+<section id="lockScreen" class="screen lock-screen hidden">
+  <div class="lock-symbol" id="lockSymbol" aria-hidden="true">♙</div>
+  <div class="eyebrow">THE GOLDEN LOCK</div>
+  <h2>One last little thing</h2><p class="subhead" id="promptText">Now type the day you were born</p>
+  <div class="date-boxes" id="dateBoxes">
+    <div class="date-field"><label for="dayInput">DD</label><input id="dayInput" inputmode="numeric" maxlength="2" placeholder="DD" autocomplete="off"></div>
+    <span class="date-slash">/</span>
+    <div class="date-field"><label for="monthInput">MM</label><input id="monthInput" inputmode="numeric" maxlength="2" placeholder="MM" autocomplete="off"></div>
+    <span class="date-slash">/</span>
+    <div class="date-field year-field"><label for="yearInput">YYYY</label><input id="yearInput" inputmode="numeric" maxlength="4" placeholder="YYYY" autocomplete="off"></div>
+  </div>
+  <p id="feedback" class="feedback" aria-live="polite">A date only you know ✨</p>
+  <div class="keypad" id="keypad" aria-label="Number keypad">
+    <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+    <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+    <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+    <button data-key="clear" class="key-alt">Clear</button><button data-key="0">0</button><button data-key="back" class="key-alt">⌫</button>
+  </div>
+  <button id="unlockBtn" class="primary unlock-button">Unlock the surprise <span>✦</span></button>
+  <button id="skipBtn" class="text-button hidden">Skip for now</button>
+</section>
+<section id="birthdayScreen" class="screen birthday-screen hidden" aria-label="Ram's birthday surprise">
+  <iframe id="birthdayFrame" title="Ram's birthday surprise"></iframe>
+</section>
+</main>
+<div id="celebration" class="celebration hidden" aria-hidden="true"><div class="celebration-glow"></div><div class="celebration-lock">🔓</div><div class="celebration-message">Unlocked with love</div></div>
+<script src="js/config.js"></script><script src="js/game.js?v=2"></script><script src="js/app.js"></script>
+</body></html>
